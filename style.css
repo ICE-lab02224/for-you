@@ -1,0 +1,42 @@
+body {
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.container {
+    width: 50rem;
+    height: 20rem;
+    position: relative;
+}
+
+.svg-container {
+    z-index: 2;
+    position: absolute;
+}
+
+/* ทำให้ตัวอักษร I และ U ขยับ */
+.animate-text {
+    fill: #a5b9c7;
+    animation: floatText 2s ease-in-out infinite;
+}
+
+/* ทำให้หัวใจเต้น */
+.heart {
+    animation: heartbeat 1s infinite;
+}
+
+/* เอฟเฟกต์ขยับตัวอักษร */
+@keyframes floatText {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+/* เอฟเฟกต์หัวใจเต้น */
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
